@@ -10,21 +10,23 @@ import (
 )
 
 //A Response struct to map the Entire Response
-type Response struct{
-	Name string `json:"name"`
+type Response struct {
+	Name    string    `json:"name"`
 	Pokemon []Pokemon `json:"pokemon_entries"`
 }
+
 //A Pokemon Struct to map every pokemon to
-type Pokemon struct{
-	EntryNO int `json:"entry_number"`
+type Pokemon struct {
+	EntryNO int            `json:"entry_number"`
 	Species PokemonSpecies `json:"pokemon_species"`
 }
+
 //A struct to map our Pokemon's Species which includes it's name
-type PokemonSpecies struct{
+type PokemonSpecies struct {
 	Name string `json:"name"`
 }
 
-func main(){
+func main() {
 	response, err := http.Get("http://pokeapi.co/api/v2/pokedex/kanto/")
 	if err != nil {
 		fmt.Print(err.Error())
@@ -38,9 +40,10 @@ func main(){
 
 	var responseObject Response
 	json.Unmarshal(responseData, &responseObject)
+	//fmt.Println(responseData)
 
-	fmt.Println(responseObject.Name) //fetching name of Response
-	fmt.Println(len(responseObject.Pokemon))//
+	fmt.Println(responseObject.Name)         //fetching name of Response
+	fmt.Println(len(responseObject.Pokemon)) //
 
 	for i := 0; i < len(responseObject.Pokemon); i++ {
 		fmt.Println(responseObject.Pokemon[i].Species.Name)

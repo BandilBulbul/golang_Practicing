@@ -73,3 +73,5 @@ func handlerMethod() {
 func main() {
 	handlerMethod()
 }
+
+//testing.go

@@ -1,0 +1,1106 @@
+updated:"2021/04/21 04:21:14+00"
+deaths:2549
+country:"Afghanistan"
+confirmed:58037
+recovered:52272
+capital_city:"Kabul"
+deaths:2353
+country:"Albania"
+capital_city:"Tirana"
+updated:"2021/04/21 04:21:14+00"
+confirmed:129842
+recovered:102601
+recovered:83636
+capital_city:"Alger"
+country:"Algeria"
+confirmed:119992
+deaths:3165
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Andorra la Vella"
+confirmed:12874
+recovered:12285
+deaths:123
+country:"Andorra"
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Luanda"
+deaths:565
+recovered:22647
+country:"Angola"
+updated:"2021/04/21 04:21:14+00"
+confirmed:24661
+updated:"2021/04/21 04:21:14+00"
+recovered:995
+capital_city:"Saint John's"
+confirmed:1217
+deaths:31
+country:"Antigua and Barbuda"
+deaths:59792
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Buenos Aires"
+recovered:2407853
+confirmed:2743620
+country:"Argentina"
+country:"Armenia"
+confirmed:209485
+recovered:189688
+deaths:3919
+capital_city:"Yerevan"
+updated:"2021/04/21 04:21:14+00"
+country:"Australia"
+confirmed:29576
+recovered:23177
+deaths:910
+capital_city:"Canberra"
+updated:"2021/04/21 04:21:14+00"
+confirmed:597566
+recovered:560492
+deaths:9959
+capital_city:"Wien"
+country:"Austria"
+capital_city:"Baku"
+confirmed:303858
+recovered:267485
+deaths:4203
+country:"Azerbaijan"
+updated:"2021/04/21 04:21:14+00"
+confirmed:9791
+country:"Bahamas"
+updated:"2021/04/21 04:21:14+00"
+deaths:194
+capital_city:"Nassau"
+recovered:9059
+capital_city:"al-Manama"
+recovered:154711
+deaths:605
+updated:"2021/04/21 04:21:14+00"
+confirmed:166157
+country:"Bahrain"
+capital_city:"Dhaka"
+updated:"2021/04/21 04:21:14+00"
+recovered:628111
+deaths:10588
+country:"Bangladesh"
+confirmed:727780
+capital_city:"Bridgetown"
+confirmed:3793
+deaths:44
+recovered:3692
+country:"Barbados"
+updated:"2021/04/21 04:21:14+00"
+updated:"2021/04/21 04:21:14+00"
+confirmed:345998
+country:"Belarus"
+capital_city:"Minsk"
+recovered:336227
+deaths:2443
+confirmed:955056
+deaths:23834
+capital_city:"Bruxelles [Brussel]"
+recovered:0
+country:"Belgium"
+recovered:12161
+country:"Belize"
+capital_city:"Belmopan"
+deaths:318
+confirmed:12568
+updated:"2021/04/21 04:21:14+00"
+confirmed:7720
+country:"Benin"
+capital_city:"Porto-Novo"
+recovered:7510
+deaths:97
+updated:"2021/04/21 04:21:14+00"
+updated:"2021/04/21 04:21:14+00"
+deaths:1
+recovered:883
+country:"Bhutan"
+confirmed:966
+capital_city:"Thimphu"
+recovered:240336
+deaths:12695
+capital_city:"La Paz"
+confirmed:291675
+country:"Bolivia"
+updated:"2021/04/21 04:21:14+00"
+recovered:149273
+capital_city:"Sarajevo"
+confirmed:191876
+country:"Bosnia and Herzegovina"
+deaths:8025
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Gaborone"
+recovered:39733
+deaths:684
+confirmed:44702
+country:"Botswana"
+updated:"2021/04/21 04:21:14+00"
+confirmed:14043076
+recovered:12425791
+capital_city:"Brasília"
+deaths:378003
+country:"Brazil"
+recovered:210
+country:"Brunei"
+capital_city:"Bandar Seri Begawan"
+updated:"2021/04/21 04:21:14+00"
+deaths:3
+confirmed:223
+updated:"2021/04/21 04:21:14+00"
+confirmed:390911
+recovered:314273
+country:"Bulgaria"
+deaths:15518
+capital_city:"Sofia"
+recovered:12812
+deaths:155
+confirmed:13167
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Ouagadougou"
+country:"Burkina Faso"
+confirmed:142644
+recovered:131903
+deaths:3206
+updated:"2021/04/21 04:21:14+00"
+confirmed:3643
+recovered:773
+deaths:6
+country:"Burundi"
+capital_city:"Bujumbura"
+updated:"2021/04/21 04:21:14+00"
+updated:"2021/04/21 04:21:14+00"
+confirmed:20781
+recovered:18350
+deaths:194
+country:"Cambodia"
+capital_city:"Phnom Penh"
+deaths:49
+updated:"2021/04/21 04:21:14+00"
+confirmed:7444
+recovered:2555
+recovered:35261
+deaths:939
+confirmed:64809
+capital_city:"Yaound"
+updated:"2021/04/21 04:21:14+00"
+country:"Cameroon"
+recovered:1038181
+deaths:23698
+country:"Canada"
+confirmed:1146817
+capital_city:"Ottawa"
+capital_city:"Bangui"
+updated:"2021/04/21 04:21:14+00"
+confirmed:5929
+recovered:5112
+deaths:79
+country:"Central African Republic"
+recovered:4353
+capital_city:"N'Djam"
+updated:"2021/04/21 04:21:14+00"
+country:"Chad"
+confirmed:4723
+deaths:169
+confirmed:1136189
+country:"Chile"
+capital_city:"Santiago de Chile"
+recovered:1067662
+deaths:25317
+deaths:4845
+capital_city:"Peking"
+confirmed:102293
+recovered:96935
+country:"China"
+recovered:2505738
+deaths:69177
+country:"Colombia"
+confirmed:2684101
+capital_city:"Santaf"
+recovered:3626
+deaths:146
+updated:"2021/04/21 04:21:14+00"
+country:"Comoros"
+confirmed:3820
+capital_city:"Moroni"
+confirmed:10084
+recovered:8208
+deaths:139
+updated:"2021/04/21 04:21:14+00"
+deaths:748
+updated:"2021/04/21 04:21:14+00"
+confirmed:29084
+recovered:26108
+recovered:199166
+deaths:3104
+country:"Costa Rica"
+updated:"2021/04/21 04:21:14+00"
+confirmed:231967
+capital_city:"San Jos"
+deaths:275
+updated:"2021/04/21 04:21:14+00"
+confirmed:45614
+recovered:45199
+country:"Cote d'Ivoire"
+capital_city:"Yamoussoukro"
+confirmed:310306
+country:"Croatia"
+deaths:6643
+updated:"2021/04/21 04:21:14+00"
+recovered:289664
+capital_city:"Zagreb"
+confirmed:95754
+recovered:90067
+country:"Cuba"
+updated:"2021/04/21 04:21:14+00"
+deaths:538
+capital_city:"La Habana"
+confirmed:58022
+deaths:295
+updated:"2021/04/21 04:21:14+00"
+recovered:39061
+country:"Cyprus"
+capital_city:"Nicosia"
+updated:"2021/04/21 04:21:14+00"
+deaths:28640
+capital_city:"Praha"
+confirmed:1606030
+country:"Czechia"
+recovered:1515106
+capital_city:"Copenhagen"
+recovered:232882
+deaths:2464
+confirmed:244759
+country:"Denmark"
+updated:"2021/04/21 04:21:14+00"
+confirmed:712
+recovered:699
+deaths:13
+updated:"2021/04/21 04:21:14+00"
+updated:"2021/04/21 04:21:14+00"
+recovered:9607
+country:"Djibouti"
+confirmed:10557
+capital_city:"Djibouti"
+deaths:123
+capital_city:"Roseau"
+confirmed:165
+updated:"2021/04/21 04:21:14+00"
+country:"Dominica"
+deaths:0
+recovered:159
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Santo Domingo de Guzm"
+deaths:3426
+country:"Dominican Republic"
+confirmed:261848
+recovered:219262
+country:"Ecuador"
+deaths:17744
+capital_city:"Quito"
+confirmed:361154
+updated:"2021/04/21 04:21:14+00"
+recovered:309541
+updated:"2021/04/21 04:21:14+00"
+deaths:12820
+country:"Egypt"
+recovered:164368
+capital_city:"Cairo"
+confirmed:218041
+country:"El Salvador"
+capital_city:"San Salvador"
+updated:"2021/04/21 04:21:14+00"
+deaths:2082
+confirmed:67851
+recovered:63982
+capital_city:"Malabo"
+country:"Equatorial Guinea"
+recovered:7016
+deaths:106
+confirmed:7505
+updated:"2021/04/21 04:21:14+00"
+country:"Eritrea"
+confirmed:3548
+recovered:3341
+capital_city:"Asmara"
+deaths:10
+updated:"2021/04/21 04:21:14+00"
+deaths:1104
+recovered:103586
+confirmed:118317
+capital_city:"Tallinn"
+updated:"2021/04/21 04:21:14+00"
+country:"Estonia"
+deaths:671
+updated:"2021/04/21 04:21:14+00"
+confirmed:18417
+recovered:17718
+recovered:181935
+capital_city:"Addis Abeba"
+confirmed:245155
+deaths:3439
+updated:"2021/04/21 04:21:14+00"
+country:"Ethiopia"
+capital_city:"Suva"
+confirmed:77
+deaths:2
+country:"Fiji"
+updated:"2021/04/21 04:21:14+00"
+recovered:65
+confirmed:84501
+country:"Finland"
+updated:"2021/04/21 04:21:14+00"
+recovered:46000
+capital_city:"Helsinki [Helsingfors]"
+deaths:893
+capital_city:"Paris"
+updated:"2021/04/21 04:21:14+00"
+confirmed:5401305
+country:"France"
+recovered:330790
+deaths:101713
+recovered:18706
+capital_city:"Libreville"
+confirmed:22032
+country:"Gabon"
+updated:"2021/04/21 04:21:14+00"
+deaths:136
+capital_city:"Banjul"
+updated:"2021/04/21 04:21:14+00"
+deaths:170
+country:"Gambia"
+confirmed:5784
+recovered:5225
+recovered:282237
+updated:"2021/04/21 04:21:14+00"
+confirmed:297728
+deaths:3959
+country:"Georgia"
+capital_city:"Tbilisi"
+country:"Germany"
+capital_city:"Berlin"
+confirmed:3198534
+recovered:2831440
+deaths:80680
+recovered:89604
+capital_city:"Accra"
+confirmed:91709
+deaths:771
+country:"Ghana"
+updated:"2021/04/21 04:21:14+00"
+recovered:93764
+country:"Greece"
+confirmed:320629
+updated:"2021/04/21 04:21:14+00"
+deaths:9627
+capital_city:"Athenai"
+confirmed:157
+recovered:154
+deaths:1
+capital_city:"Saint George's"
+country:"Grenada"
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Ciudad de Guatemala"
+deaths:7279
+recovered:192519
+updated:"2021/04/21 04:21:14+00"
+confirmed:214700
+country:"Guatemala"
+confirmed:21633
+recovered:18991
+deaths:139
+country:"Guinea"
+capital_city:"Conakry"
+updated:"2021/04/21 04:21:14+00"
+deaths:66
+updated:"2021/04/21 04:21:14+00"
+recovered:3170
+country:"Guinea-Bissau"
+confirmed:3713
+capital_city:"Bissau"
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Georgetown"
+confirmed:11972
+deaths:273
+country:"Guyana"
+recovered:10297
+updated:"2021/04/21 04:21:14+00"
+deaths:251
+confirmed:12918
+recovered:11791
+country:"Haiti"
+capital_city:"Port-au-Prince"
+capital_city:"Citt"
+recovered:15
+deaths:0
+country:"Holy See"
+confirmed:27
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Tegucigalpa"
+country:"Honduras"
+confirmed:202413
+recovered:76446
+updated:"2021/04/21 04:21:14+00"
+deaths:4976
+capital_city:"Budapest"
+confirmed:754833
+recovered:461181
+country:"Hungary"
+updated:"2021/04/21 04:21:14+00"
+deaths:25580
+confirmed:6350
+recovered:6208
+capital_city:"Reykjav"
+updated:"2021/04/21 04:21:14+00"
+country:"Iceland"
+deaths:29
+confirmed:15321089
+deaths:180530
+country:"India"
+recovered:13108582
+capital_city:"New Delhi"
+capital_city:"Jakarta"
+country:"Indonesia"
+updated:"2021/04/21 04:21:14+00"
+deaths:43777
+recovered:1468142
+confirmed:1614849
+recovered:1810531
+deaths:67525
+country:"Iran"
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Tehran"
+confirmed:2286927
+confirmed:993158
+capital_city:"Baghdad"
+deaths:15060
+updated:"2021/04/21 04:21:14+00"
+recovered:870927
+country:"Iraq"
+confirmed:244297
+deaths:4847
+country:"Ireland"
+capital_city:"Dublin"
+updated:"2021/04/21 04:21:14+00"
+recovered:23364
+recovered:828902
+updated:"2021/04/21 04:21:14+00"
+country:"Israel"
+capital_city:"Jerusalem"
+confirmed:837357
+deaths:6345
+country:"Italy"
+confirmed:3891063
+recovered:3290715
+deaths:117633
+capital_city:"Roma"
+country:"Jamaica"
+deaths:738
+capital_city:"Kingston"
+updated:"2021/04/21 04:21:14+00"
+confirmed:44254
+recovered:19962
+recovered:485920
+country:"Japan"
+confirmed:542467
+deaths:9682
+capital_city:"Tokyo"
+deaths:8372
+country:"Jordan"
+updated:"2021/04/21 04:21:14+00"
+confirmed:692181
+recovered:649718
+capital_city:"Amman"
+recovered:303437
+capital_city:"Astana"
+confirmed:346971
+country:"Kazakhstan"
+updated:"2021/04/21 04:21:14+00"
+deaths:3297
+recovered:103838
+deaths:2519
+capital_city:"Nairobi"
+updated:"2021/04/21 04:21:14+00"
+confirmed:152523
+country:"Kenya"
+deaths:1806
+capital_city:"Seoul"
+recovered:105877
+updated:"2021/04/21 04:21:14+00"
+confirmed:115926
+country:"Korea, South"
+confirmed:101832
+recovered:88164
+deaths:2105
+updated:"2021/04/21 04:21:14+00"
+confirmed:259868
+updated:"2021/04/21 04:21:14+00"
+recovered:243056
+deaths:1468
+country:"Kuwait"
+capital_city:"Kuwait"
+confirmed:92320
+deaths:1557
+updated:"2021/04/21 04:21:14+00"
+recovered:87229
+country:"Kyrgyzstan"
+capital_city:"Bishkek"
+capital_city:"Vientiane"
+updated:"2021/04/21 04:21:14+00"
+confirmed:60
+deaths:0
+recovered:49
+country:"Laos"
+deaths:2071
+capital_city:"Riga"
+updated:"2021/04/21 04:21:14+00"
+confirmed:112224
+country:"Latvia"
+recovered:102290
+confirmed:513006
+updated:"2021/04/21 04:21:14+00"
+recovered:432548
+deaths:6995
+country:"Lebanon"
+capital_city:"Beirut"
+deaths:316
+confirmed:10720
+capital_city:"Maseru"
+country:"Lesotho"
+updated:"2021/04/21 04:21:14+00"
+recovered:5868
+confirmed:2042
+recovered:1899
+updated:"2021/04/21 04:21:14+00"
+deaths:85
+country:"Liberia"
+capital_city:"Monrovia"
+updated:"2021/04/21 04:21:14+00"
+country:"Libya"
+confirmed:173089
+capital_city:"Tripoli"
+recovered:158352
+deaths:2919
+confirmed:2836
+country:"Liechtenstein"
+updated:"2021/04/21 04:21:14+00"
+recovered:2698
+deaths:56
+capital_city:"Vaduz"
+recovered:213118
+country:"Lithuania"
+capital_city:"Vilnius"
+confirmed:235383
+deaths:3785
+updated:"2021/04/21 04:21:14+00"
+recovered:61594
+deaths:786
+country:"Luxembourg"
+capital_city:"Luxembourg [Luxemburg/L"
+updated:"2021/04/21 04:21:14+00"
+confirmed:65319
+updated:"2021/04/21 04:21:14+00"
+confirmed:9
+recovered:7
+deaths:2
+capital_city:"Antananarivo"
+deaths:563
+recovered:26291
+confirmed:33202
+updated:"2021/04/21 04:21:14+00"
+country:"Madagascar"
+capital_city:"Lilongwe"
+updated:"2021/04/21 04:21:14+00"
+confirmed:33968
+recovered:31810
+country:"Malawi"
+deaths:1142
+confirmed:379473
+updated:"2021/04/21 04:21:14+00"
+recovered:356816
+capital_city:"Kuala Lumpur"
+deaths:1389
+country:"Malaysia"
+capital_city:"Male"
+updated:"2021/04/21 04:21:14+00"
+recovered:23803
+deaths:71
+country:"Maldives"
+confirmed:26667
+capital_city:"Bamako"
+updated:"2021/04/21 04:21:14+00"
+confirmed:13246
+recovered:7613
+deaths:444
+country:"Mali"
+confirmed:30039
+recovered:29065
+deaths:411
+country:"Malta"
+capital_city:"Valletta"
+updated:"2021/04/21 04:21:14+00"
+deaths:0
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Dalap-Uliga-Darrit"
+recovered:4
+country:"Marshall Islands"
+confirmed:4
+capital_city:"Nouakchott"
+recovered:17519
+deaths:454
+confirmed:18156
+updated:"2021/04/21 04:21:14+00"
+country:"Mauritania"
+deaths:15
+capital_city:"Port-Louis"
+updated:"2021/04/21 04:21:14+00"
+confirmed:1203
+country:"Mauritius"
+recovered:934
+deaths:213048
+capital_city:"Ciudad de M"
+confirmed:2311172
+recovered:1765244
+country:"Mexico"
+recovered:1
+deaths:0
+updated:"2021/04/21 04:21:14+00"
+confirmed:1
+recovered:233281
+confirmed:246691
+capital_city:"Chisinau"
+updated:"2021/04/21 04:21:14+00"
+country:"Moldova"
+deaths:5616
+updated:"2021/04/21 04:21:14+00"
+confirmed:2413
+country:"Monaco"
+recovered:2306
+capital_city:"Monaco-Ville"
+deaths:31
+confirmed:25364
+country:"Mongolia"
+updated:"2021/04/21 04:21:14+00"
+recovered:13346
+deaths:56
+capital_city:"Ulan Bator"
+updated:"2021/04/21 04:21:14+00"
+confirmed:95894
+recovered:91403
+deaths:1441
+confirmed:506669
+country:"Morocco"
+updated:"2021/04/21 04:21:14+00"
+deaths:8959
+capital_city:"Rabat"
+recovered:492725
+recovered:62323
+capital_city:"Maputo"
+confirmed:69309
+country:"Mozambique"
+updated:"2021/04/21 04:21:14+00"
+deaths:802
+updated:"2021/04/21 04:21:14+00"
+confirmed:46875
+country:"Namibia"
+capital_city:"Windhoek"
+recovered:44953
+deaths:608
+deaths:3102
+confirmed:287567
+recovered:275806
+capital_city:"Kathmandu"
+updated:"2021/04/21 04:21:14+00"
+country:"Nepal"
+deaths:17179
+confirmed:1442481
+recovered:21730
+country:"Netherlands"
+capital_city:"Amsterdam"
+country:"New Zealand"
+deaths:26
+capital_city:"Wellington"
+updated:"2021/04/21 04:21:14+00"
+confirmed:2599
+recovered:2490
+capital_city:"Managua"
+updated:"2021/04/21 04:21:14+00"
+recovered:4225
+confirmed:6835
+deaths:181
+country:"Nicaragua"
+capital_city:"Niamey"
+updated:"2021/04/21 04:21:14+00"
+recovered:4795
+deaths:191
+confirmed:5140
+country:"Niger"
+capital_city:"Abuja"
+updated:"2021/04/21 04:21:14+00"
+country:"Nigeria"
+deaths:2061
+recovered:154406
+confirmed:164423
+confirmed:147995
+updated:"2021/04/21 04:21:14+00"
+deaths:4509
+capital_city:"Skopje"
+recovered:124828
+country:"North Macedonia"
+confirmed:108342
+country:"Norway"
+updated:"2021/04/21 04:21:14+00"
+recovered:17998
+deaths:709
+capital_city:"Oslo"
+updated:"2021/04/21 04:21:14+00"
+deaths:1909
+capital_city:"Masqat"
+confirmed:182693
+country:"Oman"
+recovered:162656
+confirmed:772381
+deaths:16600
+capital_city:"Islamabad"
+recovered:672619
+country:"Pakistan"
+capital_city:"Ciudad de Panam"
+deaths:6192
+country:"Panama"
+confirmed:361319
+updated:"2021/04/21 04:21:14+00"
+recovered:351228
+recovered:846
+updated:"2021/04/21 04:21:14+00"
+deaths:91
+capital_city:"Port Moresby"
+country:"Papua New Guinea"
+confirmed:9952
+country:"Paraguay"
+deaths:5470
+updated:"2021/04/21 04:21:14+00"
+confirmed:255046
+recovered:209754
+capital_city:"Asunci"
+confirmed:1719088
+recovered:1645100
+country:"Peru"
+deaths:57954
+capital_city:"Lima"
+recovered:809959
+capital_city:"Manila"
+confirmed:953106
+updated:"2021/04/21 04:21:14+00"
+country:"Philippines"
+deaths:16141
+recovered:2354652
+country:"Poland"
+confirmed:2704571
+deaths:62734
+capital_city:"Warszawa"
+updated:"2021/04/21 04:21:14+00"
+updated:"2021/04/21 04:21:14+00"
+recovered:790118
+capital_city:"Lisboa"
+confirmed:831645
+deaths:16951
+country:"Portugal"
+deaths:391
+capital_city:"Doha"
+updated:"2021/04/21 04:21:14+00"
+confirmed:198361
+country:"Qatar"
+recovered:175431
+recovered:950242
+capital_city:"Bucuresti"
+country:"Romania"
+confirmed:1034003
+deaths:26618
+updated:"2021/04/21 04:21:14+00"
+capital_city:"Moscow"
+country:"Russia"
+confirmed:4665553
+recovered:4293866
+deaths:104545
+confirmed:24005
+deaths:327
+capital_city:"Kigali"
+updated:"2021/04/21 03:20:58+00"
+country:"Rwanda"
+recovered:22560
+recovered:44
+capital_city:"Basseterre"
+confirmed:44
+deaths:0
+updated:"2021/04/21 03:20:58+00"
+country:"Saint Kitts and Nevis"
+confirmed:4419
+capital_city:"Castries"
+recovered:4265
+country:"Saint Lucia"
+updated:"2021/04/21 03:20:58+00"
+deaths:69
+updated:"2021/04/21 03:20:58+00"
+deaths:10
+country:"Saint Vincent and the Grenadines"
+confirmed:1819
+recovered:1686
+capital_city:"Kingstown"
+capital_city:"Apia"
+updated:"2021/04/21 03:20:58+00"
+deaths:0
+country:"Samoa"
+confirmed:3
+recovered:2
+capital_city:"San Marino"
+updated:"2021/04/21 03:20:58+00"
+deaths:88
+country:"San Marino"
+confirmed:5040
+recovered:4755
+capital_city:"S"
+country:"Sao Tome and Principe"
+deaths:35
+updated:"2021/04/21 03:20:58+00"
+confirmed:2283
+recovered:2219
+recovered:390538
+deaths:6846
+country:"Saudi Arabia"
+updated:"2021/04/21 03:20:58+00"
+confirmed:407010
+capital_city:"Riyadh"
+country:"Senegal"
+confirmed:39836
+recovered:38600
+deaths:1095
+capital_city:"Dakar"
+updated:"2021/04/21 03:20:58+00"
+updated:"2021/04/21 03:20:58+00"
+confirmed:667937
+recovered:0
+deaths:6058
+capital_city:"Victoria"
+recovered:4535
+country:"Seychelles"
+updated:"2021/04/21 03:20:58+00"
+confirmed:5012
+deaths:25
+confirmed:4041
+deaths:79
+country:"Sierra Leone"
+updated:"2021/04/21 03:20:58+00"
+recovered:2857
+capital_city:"Freetown"
+deaths:30
+country:"Singapore"
+capital_city:"Singapore"
+updated:"2021/04/21 03:20:58+00"
+confirmed:60865
+recovered:60540
+confirmed:376709
+recovered:255300
+capital_city:"Bratislava"
+deaths:11244
+country:"Slovakia"
+updated:"2021/04/21 03:20:58+00"
+deaths:4172
+recovered:216528
+confirmed:233031
+country:"Slovenia"
+capital_city:"Ljubljana"
+updated:"2021/04/21 03:20:58+00"
+confirmed:20
+recovered:18
+deaths:0
+country:"Solomon Islands"
+capital_city:"Honiara"
+updated:"2021/04/21 03:20:58+00"
+updated:"2021/04/21 03:20:58+00"
+deaths:678
+capital_city:"Mogadishu"
+country:"Somalia"
+confirmed:13324
+recovered:5518
+confirmed:1568366
+deaths:53887
+country:"South Africa"
+capital_city:"Pretoria"
+updated:"2021/04/21 03:20:58+00"
+recovered:1494630
+capital_city:"Juba"
+recovered:10215
+updated:"2021/04/21 03:20:58+00"
+confirmed:10478
+deaths:114
+country:"South Sudan"
+confirmed:3428354
+deaths:77102
+capital_city:"Madrid"
+recovered:150376
+country:"Spain"
+capital_city:null
+confirmed:97472
+deaths:620
+updated:"2021/04/21 03:20:58+00"
+recovered:93547
+country:"Sri Lanka"
+capital_city:"Khartum"
+recovered:26248
+deaths:2287
+country:"Sudan"
+updated:"2021/04/21 03:20:58+00"
+confirmed:33083
+updated:"2021/04/21 03:20:58+00"
+country:"Suriname"
+deaths:188
+confirmed:9687
+recovered:8900
+capital_city:"Paramaribo"
+country:"Sweden"
+confirmed:916830
+recovered:0
+deaths:13825
+capital_city:"Stockholm"
+recovered:317600
+confirmed:639445
+updated:"2021/04/21 03:20:58+00"
+deaths:10532
+capital_city:"Bern"
+country:"Switzerland"
+recovered:15088
+country:"Syria"
+updated:"2021/04/21 03:20:58+00"
+deaths:1468
+capital_city:"Damascus"
+confirmed:21433
+deaths:11
+updated:"2021/04/21 03:20:58+00"
+confirmed:1078
+recovered:1038
+confirmed:13308
+deaths:90
+capital_city:"Dushanbe"
+updated:"2021/04/21 03:20:58+00"
+recovered:13218
+country:"Tajikistan"
+recovered:183
+capital_city:"Dodoma"
+deaths:21
+country:"Tanzania"
+updated:"2021/04/21 03:20:58+00"
+confirmed:509
+confirmed:45185
+recovered:26873
+capital_city:"Bangkok"
+updated:"2021/04/21 03:20:58+00"
+deaths:108
+country:"Thailand"
+confirmed:1452
+recovered:727
+deaths:2
+updated:"2021/04/21 03:20:58+00"
+recovered:10350
+country:"Togo"
+capital_city:"Lom"
+updated:"2021/04/21 03:20:58+00"
+confirmed:12610
+deaths:121
+capital_city:"Port-of-Spain"
+confirmed:9135
+updated:"2021/04/21 03:20:58+00"
+recovered:7996
+deaths:157
+country:"Trinidad and Tobago"
+updated:"2021/04/21 03:20:58+00"
+country:"Tunisia"
+deaths:9918
+recovered:239104
+capital_city:"Tunis"
+confirmed:289230
+recovered:3792129
+country:"Turkey"
+capital_city:"Ankara"
+updated:"2021/04/21 03:20:58+00"
+confirmed:4384624
+deaths:36613
+confirmed:41422
+country:"Uganda"
+deaths:341
+updated:"2021/04/21 03:20:58+00"
+recovered:40898
+capital_city:"Kampala"
+capital_city:"Kyiv"
+deaths:42129
+country:"Ukraine"
+confirmed:2015257
+recovered:1549115
+updated:"2021/04/21 03:20:58+00"
+recovered:483180
+deaths:1559
+country:"United Arab Emirates"
+confirmed:500860
+capital_city:"Abu Dhabi"
+recovered:14054
+country:"United Kingdom"
+confirmed:4408644
+deaths:127557
+capital_city:"London"
+deaths:2022
+updated:"2021/04/21 03:20:58+00"
+confirmed:169327
+country:"Uruguay"
+capital_city:"Montevideo"
+recovered:139590
+deaths:639
+country:"Uzbekistan"
+confirmed:87225
+recovered:84533
+capital_city:"Toskent"
+updated:"2021/04/21 03:20:58+00"
+confirmed:3
+country:"Vanuatu"
+recovered:1
+deaths:0
+capital_city:"Port-Vila"
+updated:"2021/04/21 03:20:58+00"
+deaths:1944
+country:"Venezuela"
+updated:"2021/04/21 03:20:58+00"
+confirmed:185736
+recovered:168418
+capital_city:"Caracas"
+deaths:35
+country:"Vietnam"
+capital_city:"Hanoi"
+confirmed:2800
+recovered:2490
+updated:"2021/04/21 03:20:58+00"
+confirmed:284280
+recovered:251663
+deaths:3078
+updated:"2021/04/21 03:20:58+00"
+confirmed:5918
+recovered:2281
+deaths:1138
+updated:"2021/04/21 03:20:58+00"
+capital_city:"Sanaa"
+country:"Yemen"
+confirmed:91042
+updated:"2021/04/21 03:20:58+00"
+country:"Zambia"
+deaths:1236
+capital_city:"Lusaka"
+recovered:88900
+recovered:35058
+deaths:1554
+confirmed:37875
+updated:"2021/04/21 03:20:58+00"
+capital_city:"Harare"
+country:"Zimbabwe"
+recovered:0
+country:"US"
+capital_city:"Washington"
+confirmed:31792110
+deaths:568461
+recovered:81740981
+deaths:3041923
+confirmed:142650677
