@@ -1,0 +1,41 @@
+type AllInfo struct {
+	All    CountryData `json:"All"`
+}
+
+type CountryData struct {
+	Confirmed           int       `json:"confirmed"`
+	Recovered           int       `json:"recovered"`
+	Deaths              int       `json:"deaths"`
+	Country             string    `json:"country"`
+	Population          int       `json:"population"`
+	Updated             string      `json:"updated"`
+}
+
+
+func get(w http.ResponseWriter, r *http.Request) {
+	resp, err := http.Get("https://covid-api.mmediagroup.fr/v1/cases?country=India")
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer resp.Body.Close()
+	bodyBytes, _ := ioutil.ReadAll(resp.Body)
+	//bodyString := string(bodyBytes)
+
+	bodyString := string(bodyBytes)
+	fmt.Println(bodyString)
+
+	var all AllInfo
+	json.Unmarshal(bodyBytes, &all)
+	values := CountryData{Confirmed: all.All.Confirmed, Recovered: all.All.Recovered, Deaths: all.All.Deaths, Country: all.All.Country, Capital_City: all.All.Capital_City, Updated: all.All.Updated}
+	p, err := template.ParseFiles("html\\covidWriteFile.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	p.Execute(w, values)
+}
+
+HomePage             string = "html\\frontPage.html"
+	WorldTemplate        string = "html\\webPage.html"
+	StatesTemplate       string = "html\\countryStatesWise.html"
+	VaccineTemplate      string = "html\\vaccinatedWebPage.html"
+	IndiaTemplate        string = "html\\statesCovidDetails.html"

@@ -1,11 +1,11 @@
 package constant
 
 const (
-	HomePage             string = "html\\frontPage.html"
-	WorldTemplate        string = "html\\webPage.html"
-	StatesTemplate       string = "html\\countryStatesWise.html"
-	VaccineTemplate      string = "html\\vaccinatedWebPage.html"
-	IndiaTemplate        string = "html\\statesCovidDetails.html"
+	HomePage             string = "html\\frontwebPage.html"
+	WorldTemplate        string = "html\\worldwebPage.html"
+	StatesTemplate       string = "html\\countrystateswebPage.html"
+	VaccineTemplate      string = "html\\vaccinationwebPage.html"
+	IndiaTemplate        string = "html\\indiawebPage.html"
 	ALLKey               string = "All"
 	ConfirmedKey         string = "confirmed"
 	RecoveredKey         string = "recovered"

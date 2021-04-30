@@ -6,12 +6,11 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto&display=swap' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.​css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 
 <head>
     <meta charset="UTF-8">
-    <title>World Covid Details</title>
+    <title>State Details</title>
     <style>
 
 		*{  
@@ -53,6 +52,7 @@
 		font-weight: 500;
 		font-size:30px;
 		line-height:45px;
+		font-weight: bold;
 
 		color:#000000;
 	}
@@ -73,7 +73,7 @@
 		line-height:33px;
 
 		color:#000000;
-        opacity:0.5;
+		opacity:0.5;
 		text-decoration:none;
 
 
@@ -111,7 +111,6 @@
 		line-height:33px;
 
 		color:#000000;
-		opacity:0.5;
 		text-decoration:none;
 
 
@@ -122,8 +121,6 @@
 		height:33px;
 		left:900px;
 		top:23px;
-		text-decoration:none;
-
 
 		font-family:Poppins;
 		font-style:normal;
@@ -152,6 +149,7 @@
 		line-height:33px;
 
 		color:#000000;
+		opacity:0.5;
 		text-decoration:none;
 
 	}
@@ -165,7 +163,7 @@
             margin-left: auto;
             margin-right: auto;
 			border-collapse: collapse;
-			width:600px
+			width:1000px
 			
 
         }
@@ -272,22 +270,27 @@
         </div>
         </nav>
 		    <div class="myDiv">
-				<div><h2 class="banner"> Worldwide Vaccine</h2></div>
+				<div><h2 class="banner">Covid Cases Details </h2></div>
 				<div>
 					<table border="1"  class="center" >
     <thead class="head">
-    <tr>
-        <td><h2>People Vaccinated</h2></td>
-        <td><h2>Country</h2></td>
-        <td><h2>Population</h2></td>
+   <tr>
+        <td><h2>Confirmed</h2></td>
+        <td><h2>Recovered</h2></td>
+        <td><h2>Deaths</h2></td>
+        <td><h2>States</h2></td>
+      <!--  <td><h2>Updated Time</h2></td>-->
+
     </tr>
     </thead>
     <tbody>
-    {{range. }}
+    {{range . }}
     <tr>
-        <td> {{ .People_Vaccinated}} </td>
-        <td> {{ .Country}} </td>
-        <td> {{ .Population}} </td>
+        <td>{{ .Confirmed}}</td>
+        <td>{{ .Recovered}} </td>
+        <td>{{ .Deaths}} </td>
+        <td>{{ .State_Capital}} </td>
+        <!-- <td>{{ .Updated}} </td> -->
     </tr>
     {{ end }}
     </tbody>

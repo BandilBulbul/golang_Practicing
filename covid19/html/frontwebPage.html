@@ -6,15 +6,12 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto&display=swap' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.​css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 
-<head>
-    <meta charset="UTF-8">
-    <title>World Covid Details</title>
-    <style>
-
-		*{  
+    <title>COVID-19</title>
+  </head>
+  <style>
+      *{  
 		padding:0;
 		margin:0;
 		box-sizing:border-box;
@@ -28,12 +25,13 @@
 	}
 	.nav{
 		position:absolute;
-		width:1265px;
+		width:1280px;
 		height:80px;
 		left:0px;
 		top:0px;
 		background: #c9c7c7;
 	}
+	
 	.logo{
 		position:absolute;
 		left:3.95%;
@@ -53,6 +51,7 @@
 		font-weight: 500;
 		font-size:30px;
 		line-height:45px;
+        font-weight:bold;
 
 		color:#000000;
 	}
@@ -73,10 +72,8 @@
 		line-height:33px;
 
 		color:#000000;
-        opacity:0.5;
-		text-decoration:none;
 
-
+        text-decoration:none;
 	}
 	.who{
 		position:absolute;
@@ -93,7 +90,7 @@
 
 		color:#000000;
 		opacity:0.5;
-		text-decoration:none;
+        text-decoration:none;
 
 
 	}
@@ -112,7 +109,7 @@
 
 		color:#000000;
 		opacity:0.5;
-		text-decoration:none;
+        text-decoration:none;
 
 
 	}
@@ -122,8 +119,6 @@
 		height:33px;
 		left:900px;
 		top:23px;
-		text-decoration:none;
-
 
 		font-family:Poppins;
 		font-style:normal;
@@ -133,7 +128,7 @@
 
 		color:#000000;
 		opacity:0.5;
-		text-decoration:none;
+        text-decoration:none;
 
 
 	}
@@ -152,44 +147,87 @@
 		line-height:33px;
 
 		color:#000000;
-		text-decoration:none;
+		opacity:0.5;
+        text-decoration:none;
 
 	}
-	.myDiv {
+	.main-left{
+    height:100%;
+    width:50%;
+	}
 
-            border: 5px outset rgb(252, 252, 252);
-            background-color: rgb(252, 252, 252);
-            text-align: center;
-        }
-        table.center {
-            margin-left: auto;
-            margin-right: auto;
-			border-collapse: collapse;
-			width:600px
-			
-
-        }
-        
-		.banner{
-		height:60px;
-		padding-left:20px;
-        text-align: justify;
-		text-decoration: underline; 
-		color:grey;
-
-		}
-		nav{
-    background:#ffffff;
-    height: 20vh;
-    width:100%; 
+.main-right{
+    height:100%;
+    width:50%;
     display:flex;
+    justify-content:center;
     align-items:center;
-    padding-right:60px;
+    flex-direction:column;
 }
-.head{
- 
-  background-color: white;
-  color: grey;
+
+.img-v{
+    height:25vw;
+    width:25vw;
+	
+	display: block;
+    background: #E6E7ED;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+	
+}
+.main-right p{
+    font-size:30px;
+    padding-top:20px;
+}
+.main{
+    background: #f8f6f6;
+    height:100vh;
+    display:flex
+}
+.text{
+    margin-left:18%;
+    padding-top:32%;
+}
+
+.text span{
+    font-size:7vw;
+    letter-spacing:15px;
+    font-weight: bold;
+}
+
+.text p{
+	position:absolute;
+
+    font-style:normal;
+    font-weight:normal;
+    font-size:24px;
+    line-height: 36px;
+    text-align: left;
+    padding-top:18px;
+    font: weight 12px;
+    color: #4f4f4f;
+}
+.link  {
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.4s;
+	font-size:15px
+}
+.link:hover{
+    color:#464343;
+}
+.btn{
+	background-color:black;
+	border:none;
+	color:white;
+	padding:15px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	margin:4px 2px;
+	border-radius:25px;
 }
 .right-bar{
     position:absolute;
@@ -238,11 +276,13 @@
     width: 20;
     height: 20;
 }
+.details{
+    text-decoration: burlywood;    
 
-    </style>
-</head>
-<body>
-    <header>
+}
+</style>
+  <body>
+      <header>
         <nav>
         <div class="nav">
             <div class="logo">
@@ -253,7 +293,7 @@
             <div>
             <ul>
                 <li class="list">
-                    <a href="/" class="home">HOME</a>
+                 <button><a href="/" class="home">HOME</a></button>
                 </li>
                 <li class="list">
                     <a href="https://www.who.int/india/emergencies/coronavirus-disease-(covid-19)" class="who">WHO</a>
@@ -271,31 +311,32 @@
             </div>
         </div>
         </nav>
-		    <div class="myDiv">
-				<div><h2 class="banner"> Worldwide Vaccine</h2></div>
-				<div>
-					<table border="1"  class="center" >
-    <thead class="head">
-    <tr>
-        <td><h2>People Vaccinated</h2></td>
-        <td><h2>Country</h2></td>
-        <td><h2>Population</h2></td>
-    </tr>
-    </thead>
-    <tbody>
-    {{range. }}
-    <tr>
-        <td> {{ .People_Vaccinated}} </td>
-        <td> {{ .Country}} </td>
-        <td> {{ .Population}} </td>
-    </tr>
-    {{ end }}
-    </tbody>
-</table>
+           <div class="main">
+            <div class="main-left">
+                <div class="text">
+                    <span>CoronaVirus</span>
+                    <p>
+                         The virus is from the CoronaViridae family and has badly </br>
+                         impacted on the human being and primarily respiratory system.<br/><br/>
+                    </p></br>
+                </div>
+				<div> 
+				</div>
+            </div>
+            <div class="main-right">
+            </br>
+            </br>
+				<img src="https://media.istockphoto.com/photos/white-microfiber-face-mask-picture-id1217658741?k=6&m=1217658741&s=612x612&w=0&h=ENZjzAtk4jyAIqvConGrxQr6rtrKWbYSZJrNkUkVxzg=" alt="covid virus" class=img-v></img></br>
+				<div class="details"> COVID19 STATISTICS</div>
+                <div>
+					<button class="btn"><a href="/world" class="link">Worldwide</a></button>
+					<button class="btn"><a href="/indiaStates" class="link">Indiawide</a></button>
+					<button class="btn"><a href="/vaccinated" class="link">Vaccine</a></button>
+				</div>
 
-			</div>
-			
-			<div class="right-bar">
+            </div>
+        </div>
+        <div class="right-bar">
             <a href="https://www.mygov.in/corona-data/covid19-statewise-status/" class="search"><i class="fas fa-search"></i></a>
              <div class="icons">
                  <a href="https://www.youtube.com/" class="icon-btn"><i class="fa fa-youtube"></i> </a>
@@ -303,7 +344,7 @@
                  <a href="https://www.twitter.com/" class="icon-btn"><i class="fa fa-twitter"></i></a>
                  <a href="https://www.facebook.com/" class="icon-btn"><i class="fa fa-facebook"></i></a>             
             </div>
-		</header>
-	</body>
+        </div>
+      </header>
+  </body>
 </html>
-

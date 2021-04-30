@@ -69,6 +69,9 @@ func showFrontPage(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	// http.Handle("/html/",
+	// 	http.StripPrefix("/html",
+	// 		http.FileServer(http.Dir("html"))))
 	values := "hello"
 	p.Execute(w, values)
 
@@ -79,9 +82,13 @@ func handlerMethod() {
 	http.HandleFunc("/", get)
 	http.HandleFunc("/covid", showFrontPage)
 	log.Fatal(http.ListenAndServe(":8080", nil))
+	http.Handle("/covid", http.FileServer(http.Dir("covidapiproject/html")))
+
 }
 func main() {
 	handlerMethod()
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+
 }
 
 //testing.go
