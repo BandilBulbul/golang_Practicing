@@ -26,19 +26,18 @@ type WorldDetails struct {
 	Updated      string  `json:"updated"`
 }
 
+//Getting World wide data with covid cases globally
 func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 	restUrl := util.ReadUrl()
 	response, err := http.Get(restUrl.Url) //restApi
 	if err != nil {
 		log.Fatalln(err)
 	}
-	//hardcoded
-	webPage, err := template.ParseFiles(constant.WorldTemplate)
+	webPage, err := template.ParseFiles(constant.WorldTemplate) //read template
 	if err != nil {
 		log.Fatal(err)
 	}
 	CountryDetails := []WorldDetails{} //create Slice of Structure
-	//var CountryDetails []WorldDetails //create Slice of Structure
 
 	worldDetails := WorldDetails{} //Array of Struct
 
@@ -50,7 +49,7 @@ func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 
 	bodyString := string(bodyBytes) //Convert into String
 
-	//to get the all countries key values
+	//to get  all countries key values
 	var json_iterate fastjson.Parser //using package for iterate get the key and values
 	//May parse array containing values with distinct types (aka non-homogenous types).
 	values, err := json_iterate.Parse(bodyString)
@@ -68,15 +67,15 @@ func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 
 	})
 	//iterate the keyValues to get inside  values
-	for _, i := range keyValues { //i having country name ==key
-		all := countryKeysValues[i].(map[string]interface{}) //create another one interface to map with inside valuea and keys
+	for _, countryName := range keyValues { //i having country name ==key
+		all := countryKeysValues[countryName].(map[string]interface{}) //create another one interface to map with inside valuea and keys
 
 		for country_key, country_value := range all {
 			if country_key == constant.ALLKey { // condition should be satisfied
 				all_countryValues := country_value.(map[string]interface{}) //create another one
 				var confirmed_id float64
 				var confirmed, recovered, deaths, country, capital_city, updated string
-				country = i //pass the country name
+				country = countryName //pass the country name
 
 				for dataKey, dataValue := range all_countryValues {
 
@@ -115,7 +114,8 @@ func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 	webPage.Execute(w, CountryDetails) //return  to  web page
 }
 
-func CreateCSVfile(res []WorldDetails) { // we can with different entities
+//creating csv file for world wide data
+func CreateCSVfile(res []WorldDetails) {
 	file, _ := os.Create("constant\\covidDetailsFile.csv")
 	defer file.Close()
 	writer := csv.NewWriter(file)

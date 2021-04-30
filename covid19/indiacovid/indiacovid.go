@@ -59,14 +59,14 @@ func GetIndiaStatesdCovidDetails(w http.ResponseWriter, r *http.Request) {
 
 	})
 	//iterate the keyValues to get inside  values
-	for _, i := range keyValues { //i having country name ==key
+	for _, country_Name := range keyValues { //i having country name ==key
 		var confirmed_id float64
 		var confirmed, recovered, deaths, country, capital_city, updated string
-		all := statesCovidDetails[i].(map[string]interface{}) //create another one interface to map with inside valuea and keys
-		if i != constant.ALLKey {                             // condition should be satisfied
+		all := statesCovidDetails[country_Name].(map[string]interface{}) //create another one interface to map with inside valuea and keys
+		if country_Name != constant.ALLKey {                             // condition should be satisfied
 			for dataKey, dataValue := range all {
 
-				country = i //pass the country name
+				country = country_Name //pass the country name
 				//for k1, v1 := range allV {
 				if dataKey == constant.ConfirmedKey && dataValue != nil {
 					//confirmed = value.(float64)
@@ -104,6 +104,7 @@ func GetIndiaStatesdCovidDetails(w http.ResponseWriter, r *http.Request) {
 		} //states values
 
 	}
+	// sorting the data according to Confirmed cases
 	slice.Sort(states, func(i, j int) bool {
 		return states[i].Confirmed_Id > states[j].Confirmed_Id
 	})

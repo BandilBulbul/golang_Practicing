@@ -67,8 +67,8 @@ func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 		for country_key, country_value := range all {
 			//if keyy != "All" && i == countryUrl { // condition should be satisfied
 			if countryName == CountryUrl { // condition should be satisfied
-				allV := country_value.(map[string]interface{}) //create another one
-				details := CountryStatesDetails{}              //Array of Struct
+				allValues := country_value.(map[string]interface{}) //create another one
+				details := CountryStatesDetails{}                   //Array of Struct
 				var confirmed_id float64
 				var confirmed string
 				var recovered string
@@ -78,7 +78,7 @@ func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 				var updated string
 				country = countryName //pass the country name
 				state_capital = country_key
-				for dataKey, dataValue := range allV {
+				for dataKey, dataValue := range allValues {
 					if dataKey == constant.ConfirmedKey && dataValue != nil {
 						confirmed = strconv.FormatFloat(dataValue.(float64), 'f', 0, 64)
 					}
