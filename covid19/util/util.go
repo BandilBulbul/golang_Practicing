@@ -37,7 +37,7 @@ func ReadUrl() URLStruct {
 
 }
 
-func CreateCSVfile(res []CSVFile) { // we can with different entities
+func CreateCSVfile(res []CSVFile) {
 	file, _ := os.Create("constant\\covidDetailsFile.csv")
 	defer file.Close()
 	writer := csv.NewWriter(file)

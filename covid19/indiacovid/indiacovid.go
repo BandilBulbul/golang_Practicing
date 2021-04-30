@@ -24,6 +24,7 @@ type StatesDetails struct {
 	Updated      string  `json:"updated"`
 }
 
+//get india's states data
 func GetIndiaStatesdCovidDetails(w http.ResponseWriter, r *http.Request) {
 	restUrl := util.ReadUrl().UrlIndia
 	response, err := http.Get(restUrl) //restApi
@@ -46,9 +47,9 @@ func GetIndiaStatesdCovidDetails(w http.ResponseWriter, r *http.Request) {
 	bodyString := string(bodyBytes) //Convert into String
 
 	//to get the all countries key values
-	var p fastjson.Parser //using package for iterate get the key and values
+	var json_iterate fastjson.Parser //using package for iterate get the key and values
 	//May parse array containing values with distinct types (aka non-homogenous types).
-	StatesCovidValues, err := p.Parse(bodyString)
+	StatesCovidValues, err := json_iterate.Parse(bodyString)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -69,19 +70,13 @@ func GetIndiaStatesdCovidDetails(w http.ResponseWriter, r *http.Request) {
 				country = country_Name //pass the country name
 				//for k1, v1 := range allV {
 				if dataKey == constant.ConfirmedKey && dataValue != nil {
-					//confirmed = value.(float64)
 					confirmed = strconv.FormatFloat(dataValue.(float64), 'f', 0, 64)
-
 				}
 				if dataKey == constant.RecoveredKey && dataValue != nil {
-					//recovered = value.(float64)
 					recovered = strconv.FormatFloat(dataValue.(float64), 'f', 0, 64)
-
 				}
 				if dataKey == constant.DeathsKey && dataValue != nil {
-					//deaths = value.(float64)
 					deaths = strconv.FormatFloat(dataValue.(float64), 'f', 0, 64)
-
 				}
 				if dataKey == constant.CountryKey && dataValue != nil {
 					country = dataValue.(string)

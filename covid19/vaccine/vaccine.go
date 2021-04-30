@@ -15,21 +15,20 @@ import (
 )
 
 type VaccinatationCountryDetails struct {
-	//Administered                float64
 	People_Vaccinated string
-	//People_Partially_Vaccinated float64
-	Country       string
-	Population    string
-	Population_Id float64
+	Country           string
+	Population        string
+	Population_Id     float64
 }
 
+//get vaccination data
 func GetWorldVaccinationDetails(w http.ResponseWriter, r *http.Request) {
 	restUrl := util.ReadUrl().UrlVaccine
 	response, err := http.Get(restUrl)
 	if err != nil {
 		log.Fatalln(err)
 	}
-	webPage, err := template.ParseFiles(constant.VaccineTemplate)
+	webPage, err := template.ParseFiles(constant.VaccineTemplate) //Templates
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -38,55 +37,56 @@ func GetWorldVaccinationDetails(w http.ResponseWriter, r *http.Request) {
 	bodyBytes, _ := ioutil.ReadAll(response.Body)
 	defer response.Body.Close()
 
-	var msg map[string]interface{}  //create map with string as key and interface for values
-	json.Unmarshal(bodyBytes, &msg) //map the values into msg from json
+	var vaccineData map[string]interface{}  //create map with string as key and interface for values
+	json.Unmarshal(bodyBytes, &vaccineData) //map the values into msg from json
 
 	bodyString := string(bodyBytes) //Convert into String
 
 	//to get the all countries key values
-	var p fastjson.Parser //using package for iterate get the key and values
+	var json_iterate fastjson.Parser //using package for iterate get the key and values
 	//May parse array containing values with distinct types (aka non-homogenous types).
-	v, err := p.Parse(bodyString)
+	iterationKeysValues, err := json_iterate.Parse(bodyString)
 	if err != nil {
 		log.Fatal(err)
 	}
 	var keyValues []string //create  slice string
 	// Visit all the items in the top object
-	v.GetObject().Visit(func(k []byte, v *fastjson.Value) { //Visit all the items in the top object
-		keyValues = append(keyValues, string(k)) //Append into keyValues
+	iterationKeysValues.GetObject().Visit(func(keys []byte, iterationKeysValues *fastjson.Value) { //Visit all the items in the top object
+		keyValues = append(keyValues, string(keys)) //Append into keyValues
 
 	})
 	//iterate the keyValues to get inside  values
-	for _, i := range keyValues { //i having country name ==key
-		all := msg[i].(map[string]interface{}) //create another one interface to map with inside valuea and keys
+	for _, country_Name := range keyValues { //i having country name ==key
+		all := vaccineData[country_Name].(map[string]interface{}) //create another one interface to map with inside valuea and keys
 		for keyy, value := range all {
-			if keyy == constant.ALLKey && i != constant.GlobalKey && i != constant.WorldKey { // condition should be satisfied
+			if keyy == constant.ALLKey && country_Name != constant.GlobalKey && country_Name != constant.WorldKey { // condition should be satisfied
 				allV := value.(map[string]interface{})                       //create another one
 				vaccinatationCountryDetails := VaccinatationCountryDetails{} //Array of Struct
 				var peopleVaccinated string
 				var country, population string
 				var population_id float64
-				country = i //pass the country name
-				for k1, v1 := range allV {
-					if k1 == constant.People_VaccinatedKey && v1 != nil {
-						peopleVaccinated = strconv.FormatFloat(v1.(float64), 'f', 0, 64)
+				country = country_Name //pass the country name
+				for datakey, datavalue := range allV {
+					if datakey == constant.People_VaccinatedKey && datavalue != nil {
+						peopleVaccinated = strconv.FormatFloat(datavalue.(float64), 'f', 0, 64)
 					}
-					if k1 == constant.CountryKey && v1 != nil {
-						country = v1.(string)
+					if datakey == constant.CountryKey && datavalue != nil {
+						country = datavalue.(string)
 					}
-					if k1 == constant.PopulationKey && v1 != nil {
-						population = strconv.FormatFloat(v1.(float64), 'f', 0, 64)
+					if datakey == constant.PopulationKey && datavalue != nil {
+						population = strconv.FormatFloat(datavalue.(float64), 'f', 0, 64)
 					}
-					if k1 == constant.People_VaccinatedKey && v1 != nil {
-						population_id = v1.(float64)
+					if datakey == constant.People_VaccinatedKey && datavalue != nil {
+						population_id = datavalue.(float64)
 					}
 				}
 				vaccinatationCountryDetails = VaccinatationCountryDetails{People_Vaccinated: peopleVaccinated, Country: country, Population: population, Population_Id: population_id} //save data into detail variable
 				vaccineDatails = append(vaccineDatails, vaccinatationCountryDetails)                                                                                                   //append into result slice                                                                                                                  //appending it
 
 			}
-		} //states values
+		}
 	}
+	//sorting the slice of structures
 	slice.Sort(vaccineDatails, func(i, j int) bool {
 		return vaccineDatails[i].Population_Id > vaccineDatails[j].Population_Id
 	})

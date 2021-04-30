@@ -12,12 +12,12 @@ import (
 
 func HandlerMethod() {
 	log.Println("Server started on: http://localhost:8080")
+
 	http.HandleFunc("/indiaStates/", indiacovid.GetIndiaStatesdCovidDetails)
 	http.HandleFunc("/world/", worldcovid.GetWorldCovidDetails)
+	http.HandleFunc("/vaccinated/", vaccine.GetWorldVaccinationDetails)
+	http.HandleFunc("/states/", worldstatescovid.GetWorldStatesCovidDetails)
 	http.HandleFunc("/", homepage.Home)
-	//http.HandleFunc("/worldDetails", getWorldCovidDetails)
-	http.HandleFunc("/vaccinated", vaccine.GetWorldVaccinationDetails)
-	http.HandleFunc("/states", worldstatescovid.GetWorldStatesCovidDetails)
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

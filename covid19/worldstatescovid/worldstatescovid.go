@@ -34,7 +34,7 @@ func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	webPage, err := template.ParseFiles(constant.StatesTemplate)
+	webPage, err := template.ParseFiles(constant.StatesTemplate) //templates for states
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -43,29 +43,28 @@ func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 	bodyBytes, _ := ioutil.ReadAll(response.Body)
 	defer response.Body.Close()
 
-	var msg map[string]interface{}  //create map with string as key and interface for values
-	json.Unmarshal(bodyBytes, &msg) //map the values into msg from json
+	var countryStatesKeyValues map[string]interface{}  //create map with string as key and interface for values
+	json.Unmarshal(bodyBytes, &countryStatesKeyValues) //map the values into msg from json
 
 	bodyString := string(bodyBytes) //Convert into String
 
 	//to get the all countries key values
-	var p fastjson.Parser //using package for iterate get the key and values
+	var json_iteration fastjson.Parser //using package for iterate get the key and values
 	//May parse array containing values with distinct types (aka non-homogenous types).
-	v, err := p.Parse(bodyString)
+	iterateKeyValues, err := json_iteration.Parse(bodyString)
 	if err != nil {
 		log.Fatal(err)
 	}
 	var keyValues []string //create  slice string
 	// Visit all the items in the top object
-	v.GetObject().Visit(func(k []byte, v *fastjson.Value) { //Visit all the items in the top object
-		keyValues = append(keyValues, string(k)) //Append into keyValues
+	iterateKeyValues.GetObject().Visit(func(keys []byte, iterateKeyValues *fastjson.Value) { //Visit all the items in the top object
+		keyValues = append(keyValues, string(keys)) //Append into keyValues
 
 	})
 	//iterate the keyValues to get inside  values
 	for _, countryName := range keyValues { //i having country name ==key
-		all := msg[countryName].(map[string]interface{}) //create another one interface to map with inside valuea and keys
+		all := countryStatesKeyValues[countryName].(map[string]interface{}) //create another one interface to map with inside valuea and keys
 		for country_key, country_value := range all {
-			//if keyy != "All" && i == countryUrl { // condition should be satisfied
 			if countryName == CountryUrl { // condition should be satisfied
 				allValues := country_value.(map[string]interface{}) //create another one
 				details := CountryStatesDetails{}                   //Array of Struct
@@ -99,7 +98,7 @@ func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 				statesDetails = append(statesDetails, details)                                                                                                                                           //append into result slice                                                                                                                  //appending it
 
 			}
-		} //states values
+		}
 	}
 
 	slice.Sort(statesDetails, func(i, j int) bool { //sort the slice

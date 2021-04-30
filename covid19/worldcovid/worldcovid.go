@@ -29,7 +29,7 @@ type WorldDetails struct {
 //Getting World wide data with covid cases globally
 func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 	restUrl := util.ReadUrl()
-	response, err := http.Get(restUrl.Url) //restApi
+	response, err := http.Get(restUrl.Url) //restApi url
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -107,6 +107,7 @@ func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 
 		}
 	}
+	//sorting the slice of structs acc to confirmed cases
 	slice.Sort(CountryDetails, func(i, j int) bool { //sort the slice
 		return CountryDetails[i].Confirmed_Id > CountryDetails[j].Confirmed_Id
 	})
@@ -115,7 +116,7 @@ func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 }
 
 //creating csv file for world wide data
-func CreateCSVfile(res []WorldDetails) {
+func CreateCSVfile(CountryDetails []WorldDetails) {
 	file, _ := os.Create("constant\\covidDetailsFile.csv")
 	defer file.Close()
 	writer := csv.NewWriter(file)
@@ -124,16 +125,16 @@ func CreateCSVfile(res []WorldDetails) {
 	//define colum headers
 	headers := []string{"confirmed", "recovered", "deaths", "country", "capital_city", "updated"}
 
-	for key := range res {
-		r := make([]string, 0, 1+len(headers))
-		r = append(r,
-			res[key].Confirmed,
-			res[key].Recovered,
-			res[key].Deaths,
-			res[key].Country,
-			res[key].Capital_City,
-			res[key].Updated,
+	for key := range CountryDetails {
+		writeData := make([]string, 0, 1+len(headers))
+		writeData = append(writeData,
+			CountryDetails[key].Confirmed,
+			CountryDetails[key].Recovered,
+			CountryDetails[key].Deaths,
+			CountryDetails[key].Country,
+			CountryDetails[key].Capital_City,
+			CountryDetails[key].Updated,
 		)
-		writer.Write(r)
+		writer.Write(writeData)
 	}
 }
