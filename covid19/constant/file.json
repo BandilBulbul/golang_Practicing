@@ -1,0 +1,9 @@
+{
+    "url" :"https://covid-api.mmediagroup.fr/v1/cases",
+    "urlVaccine" :"https://covid-api.mmediagroup.fr/v1/vaccines",
+    "urlIndia" :"https://covid-api.mmediagroup.fr/v1/cases?country=India"
+
+
+    
+}
+

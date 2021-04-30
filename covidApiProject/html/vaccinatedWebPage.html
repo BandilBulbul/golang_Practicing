@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>India Covid Details</title>
+    <title>World Vaccination Details</title>
     <style>
         * {  
     padding:0;
@@ -133,70 +133,70 @@ body{
 
 }
         .myDiv {
-            border: 5px outset rgb(240, 236, 236);
-            background-color: rgb(244, 247, 248);
+            border: 5px outset rgb(252, 252, 252);
+            background-color: rgb(252, 252, 252);
             text-align: center;
         }
         table.center {
             margin-left: auto;
             margin-right: auto;
         }
+        #bold{
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav">
-                <div class="logo">
-                    <h1>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9-PAxnAeB0xge1OlI-denzGD4Xr4h8I-xg&usqp=CAU" width="80" height="80"></img><h2 class="covid">Covid Updates</h2>
-                    </h1>
-                </div>
-                <div>
-                <ul>
-                    <li class="list">
-                        <a href="/" class="home">HOME</a>
-                    </li>
-                    <li class="list">
-                         <a href="https://www.covid19india.org/about" class="about">ABOUT</a>
-                    </li>
-                    <li class="list">
-                        <a href="https://www.who.int/india/emergencies/coronavirus-disease-(covid-19)" class="who">WHO</a>
-                    </li> 
-                    <li class="list">
-                        <a href="/world" class="worlds">WORLD</a>
-                    </li>   
-                    <li class="list">
-                        <a href="/indiaStates" class="india">INDIA</a>
-                    </li> 
-                </ul>
-                </div>
-            </div>
-        </nav>
+<nav>
+    <div class="nav">
+        <div class="logo">
+            <h1>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9-PAxnAeB0xge1OlI-denzGD4Xr4h8I-xg&usqp=CAU" width="80" height="80"></img><h2 class="covid">Covid Updates</h2>
+            </h1>
+        </div>
+        <div>
+        <ul>
+            <li class="list">
+                <a href="/" class="home">HOME</a>
+            </li>
+            <li class="list">
+                 <a href="https://www.covid19india.org/about" class="about">ABOUT</a>
+            </li>
+            <li class="list">
+                <a href="https://www.who.int/india/emergencies/coronavirus-disease-(covid-19)" class="who">WHO</a>
+            </li> 
+            <li class="list">
+                <a href="/world" class="worlds">WORLD</a>
+            </li>   
+            <li class="list">
+                <a href="/indiaStates" class="india">INDIA</a>
+            </li> 
+        </ul>
+        </div>
+    </div>
+    </nav>
+
 <div class="myDiv">
-   <h2> India Covid Details </h2>
-<div align=right border="2" >
+    <h2> World Covid Vaccination  </h2>
+<div align=right border="2">
     <a href="/" class="link">Home</a>
+    <a href="/indiaStates" class="link">India's States</a>
 </div>
-<table border="1"  class="center">
+<table border="1"  class="center" >
     <thead>
     <tr>
+        <td><h2>People Vaccinated</h2></td>
         <td><h2>Country</h2></td>
-        <td><h2>Confirmed</h2></td>
-        <td><h2>Recovered</h2></td>
-        <td><h2>Deaths</h2></td>
-        <td><h2>Updated Time</h2></td>
-
+        <td><h2>Population</h2></td>
     </tr>
     </thead>
     <tbody>
     {{range. }}
     <tr>
-        <td>{{ .Country}} </td>
-        <td>{{ .Confirmed}}</td>
-        <td>{{ .Recovered}} </td>
-        <td>{{ .Deaths}} </td>
-        <td>{{ .Updated}} </td>
+        <td> {{ .People_Vaccinated}} </td>
+        <td> {{ .Country}} </td>
+        <td> {{ .Population}} </td>
     </tr>
     {{ end }}
     </tbody>

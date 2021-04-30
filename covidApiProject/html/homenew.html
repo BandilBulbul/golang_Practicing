@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto&display=swap' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.​css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+    <title>COVID-19</title>
+  </head>
+  <style>
+      *{  
+		padding:0;
+		margin:0;
+		box-sizing:border-box;
+	}
+
+    header{
+		position:relative;
+	}
+	body{
+		font-family:"Roboto";
+	}
+	.nav{
+		position:absolute;
+		width:1280px;
+		height:80px;
+		left:0px;
+		top:0px;
+		background: #c9c7c7;
+	}
+	
+	.logo{
+		position:absolute;
+		left:3.95%;
+		right:92.83%;
+		top:2.34%;
+		bottom:92.45%;
+	}
+	.covid{
+		position:absolute;
+		width:300px;
+		height:45px;
+		left:134px;
+		top:18px;
+
+		font-family:Poppins; 
+		font-style: normal;
+		font-weight: 500;
+		font-size:30px;
+		line-height:45px;
+        font-weight:bold;
+
+		color:#000000;
+	}
+	.list{
+		list-style:none;
+	}
+	.home{
+		position:absolute;
+		width:66px;
+		height:33px;
+		left:600px;
+		top:23px;
+
+		font-family:Poppins;
+		font-style:normal;
+		font-weight:500;
+		font-size:22px;
+		line-height:33px;
+
+		color:#000000;
+
+        text-decoration:none;
+        
+
+        
+
+	}
+	.who{
+		position:absolute;
+		width:54px;
+		height:33px;
+		left:690px;
+		top:23px;
+
+		font-family:Poppins;
+		font-style:normal;
+		font-weight:normal;
+		font-size:22px;
+		line-height:33px;
+
+		color:#000000;
+		opacity:0.5;
+        text-decoration:none;
+
+
+	}
+	.worlds{
+		position:absolute;
+		width:54px;
+		height:33px;
+		left:780px;
+		top:23px;
+
+		font-family:Poppins;
+		font-style:normal;
+		font-weight:normal;
+		font-size:22px;
+		line-height:33px;
+
+		color:#000000;
+		opacity:0.5;
+        text-decoration:none;
+
+
+	}
+	.india{
+		position:absolute;
+		width:54px;
+		height:33px;
+		left:900px;
+		top:23px;
+
+		font-family:Poppins;
+		font-style:normal;
+		font-weight:normal;
+		font-size:22px;
+		line-height:33px;
+
+		color:#000000;
+		opacity:0.5;
+        text-decoration:none;
+
+
+	}
+	
+	.vaccine{
+		position:absolute;
+		width:54px;
+		height:33px;
+		left:1000px;
+		top:23px;
+
+		font-family:Poppins;
+		font-style:normal;
+		font-weight:normal;
+		font-size:22px;
+		line-height:33px;
+
+		color:#000000;
+		opacity:0.5;
+        text-decoration:none;
+
+	}
+	.main-left{
+    height:100%;
+    width:50%;
+	}
+
+.main-right{
+    height:100%;
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.img-v{
+    height:25vw;
+    width:25vw;
+	
+	display: block;
+    background: #E6E7ED;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+	
+}
+.main-right p{
+    font-size:30px;
+    padding-top:20px;
+}
+.main{
+    background: #f8f6f6;
+    height:100vh;
+    display:flex
+}
+.text{
+    margin-left:18%;
+    padding-top:32%;
+}
+
+.text span{
+    font-size:7vw;
+    letter-spacing:15px;
+    font-weight: bold;
+}
+
+.text p{
+	position:absolute;
+
+    font-style:normal;
+    font-weight:normal;
+    font-size:24px;
+    line-height: 36px;
+    text-align: left;
+    padding-top:18px;
+    font: weight 12px;
+    color: #4f4f4f;
+}
+.link  {
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.4s;
+	font-size:15px
+}
+.link:hover{
+    color:#464343;
+}
+.btn{
+	background-color:black;
+	border:none;
+	color:white;
+	padding:15px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	margin:4px 2px;
+	border-radius:25px;
+}
+.right-bar{
+    position:absolute;
+    width:60px;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    top:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+}
+.search{
+    position:absolute;
+    color:white;
+    top:25px;
+    font-size:20px;
+}
+.icons{
+    position:absolute;
+    bottom:40px;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+}
+.icon-btn{
+    margin-top:20px;
+    background:white;
+    text-decoration:none;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    position:relative;
+    color:gray;
+    transition:0.4s;
+
+}
+.icon-btn:hover{
+    color:white;
+    background:#817b7b;
+}
+.icon-btn i{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,0%);
+    width: 20;
+    height: 20;
+}
+.details{
+    text-decoration: burlywood;    
+
+}
+
+
+
+  </style>
+  <body>
+      <header>
+        <nav>
+        <div class="nav">
+            <div class="logo">
+                <h1>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9-PAxnAeB0xge1OlI-denzGD4Xr4h8I-xg&usqp=CAU" width="80" height="80"></img><h2 class="covid">Covid Case Updates</h2>
+                </h1>
+            </div>
+            <div>
+            <ul>
+                <li class="list">
+                 <button><a href="/" class="home">HOME</a></button>
+                </li>
+                <li class="list">
+                    <a href="https://www.who.int/india/emergencies/coronavirus-disease-(covid-19)" class="who">WHO</a>
+                </li> 
+                <li class="list">
+                    <a href="/world" class="worlds">WORLD</a>
+                </li>   
+                <li class="list">
+                    <a href="/indiaStates" class="india">INDIA</a>
+                </li> 
+				<li class="list">
+                    <a href="/vaccinated" class="vaccine">VACCINATED</a>
+                </li> 
+            </ul>
+            </div>
+        </div>
+        </nav>
+           <div class="main">
+            <div class="main-left">
+                <div class="text">
+                    <span>CoronaVirus</span>
+                    <p>
+                         The virus is from the CoronaViridae family<br/>
+                   and has the greatest effect on the human respiratory system.<br/><br/>
+                    </p></br>
+                </div>
+				<div> 
+                         
+				</div>
+            </div>
+            <div class="main-right">
+               <!-- <img src="https://www.1mg.com/articles/wp-content/uploads/2020/07/mask.jpg" alt="covid virus" class=img-v></img> -->
+				<img src="https://media.istockphoto.com/photos/white-microfiber-face-mask-picture-id1217658741?k=6&m=1217658741&s=612x612&w=0&h=ENZjzAtk4jyAIqvConGrxQr6rtrKWbYSZJrNkUkVxzg=" alt="covid virus" class=img-v></img></br>
+				<div class="details"> COVID19 STATISTIC DETAILS</div>
+                <div>
+					<button class="btn"><a href="/world" class="link">Worldwide</a></button>
+					<button class="btn"><a href="/indiaStates" class="link">StateStatistics</a></button>
+					<button class="btn"><a href="/vaccinated" class="link">Vaccination</a></button>
+				</div>
+
+            </div>
+        </div>
+        <div class="right-bar">
+            <a href="https://www.mygov.in/corona-data/covid19-statewise-status/" class="search"><i class="fas fa-search"></i></a>
+             <div class="icons">
+                 <a href="https://www.youtube.com/" class="icon-btn"><i class="fa fa-youtube"></i> </a>
+                 <a href="https://www.instagram.com/" class="icon-btn"><i class="fa fa-instagram"></i></a>
+                 <a href="https://www.twitter.com/" class="icon-btn"><i class="fa fa-twitter"></i></a>
+                 <a href="https://www.facebook.com/" class="icon-btn"><i class="fa fa-facebook"></i></a>             
+            </div>
+        </div>
+      </header>
+  </body>
+</html>

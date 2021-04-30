@@ -64,10 +64,20 @@ func get(w http.ResponseWriter, r *http.Request) {
 	}
 	p.Execute(w, values)
 }
+func showFrontPage(w http.ResponseWriter, r *http.Request) {
+	p, err := template.ParseFiles("html\\frontPage.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	values := "hello"
+	p.Execute(w, values)
+
+}
 
 func handlerMethod() {
 	log.Println("Server started on: http://localhost:8080")
 	http.HandleFunc("/", get)
+	http.HandleFunc("/covid", showFrontPage)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 func main() {

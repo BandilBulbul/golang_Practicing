@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/csv"
 	"encoding/json"
+	"fmt"
 	"html/template"
 	"os"
 	"strconv"
@@ -14,25 +15,29 @@ import (
 	"github.com/valyala/fastjson"
 )
 
-type Details struct {
-	Confirmed    float64 `json:"confirmed"`
-	Recovered    float64 `json:"recovered"`
-	Deaths       float64 `json:"deaths"`
-	Country      string  `json:"country"`
-	Capital_City string  `json:"capital_city"`
-	Updated      string  `json:"updated"`
+type CountryStatesDetails struct {
+	Confirmed     float64 `json:"confirmed"`
+	Recovered     float64 `json:"recovered"`
+	Deaths        float64 `json:"deaths"`
+	Country       string  `json:"country"`
+	State_Capital string  `json:"capital_city"`
+	Updated       string  `json:"updated"`
 }
 
-func getWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
-	resp1, err := http.Get("https://covid-api.mmediagroup.fr/v1/cases") //restApi
+func getWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
+	//func getWorldCovidDetails() {
+	countryUrl := r.URL.Query().Get("country")
+
+	url := "https://covid-api.mmediagroup.fr/v1/cases?country=" + countryUrl
+	resp1, err := http.Get(url) //restApi
 	if err != nil {
 		log.Fatalln(err)
 	}
-	webPage, err := template.ParseFiles("C:\\Users\\SRS\\gitProject16april\\golang_Practicing\\covidApiProject\\html\\webPage.html")
+	webPage, err := template.ParseFiles("C:\\Users\\SRS\\gitProject16april\\golang_Practicing\\covidApiProject\\html\\countryStatesWise.html")
 	if err != nil {
 		log.Fatal(err)
 	}
-	res := []Details{} //create Slice of Structure
+	res := []CountryStatesDetails{} //create Slice of Structure
 
 	bodyBytes1, _ := ioutil.ReadAll(resp1.Body)
 	defer resp1.Body.Close()
@@ -64,16 +69,18 @@ func getWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 	for _, i := range keyValues { //i having country name ==key
 		all := msg[i].(map[string]interface{}) //create another one interface to map with inside valuea and keys
 		for keyy, value := range all {
-			if keyy == "All" { // condition should be satisfied
+			if keyy != "All" && i == countryUrl { // condition should be satisfied
 				allV := value.(map[string]interface{}) //create another one
-				details := Details{}                   //Array of Struct
+				details := CountryStatesDetails{}      //Array of Struct
 				var confirmed float64
 				var recovered float64
 				var deaths float64
 				var country string
-				var capital_city string
+				var state_capital string
 				var updated string
 				country = i //pass the country name
+				state_capital = keyy
+				//fmt.Println(keyy)
 				for k1, v1 := range allV {
 					if k1 == "confirmed" && v1 != nil {
 						confirmed = v1.(float64)
@@ -84,25 +91,51 @@ func getWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 					if k1 == "deaths" && v1 != nil {
 						deaths = v1.(float64)
 					}
-					if k1 == "country" && v1 != nil {
-						country = v1.(string)
-					}
-					if k1 == "capital_city" && v1 != nil {
-						capital_city = v1.(string)
-					}
+					// if k1 == "country" && v1 != nil {
+					// 	//country = v1.(string)
+					// 	country=i
+					// }
+					// if k1 == "capital_city" && v1 != nil {
+					// 	capital_city = v1.(string)
+					// }
 					if k1 == "updated" && v1 != nil {
 						updated = v1.(string)
 					}
 				}
-				details = Details{Confirmed: confirmed, Recovered: recovered, Deaths: deaths, Capital_City: capital_city, Country: country, Updated: updated} //save data into detail variable
-				res = append(res, details)                                                                                                                    //append into result slice                                                                                                                  //appending it
+				details = CountryStatesDetails{Confirmed: confirmed, Recovered: recovered, Deaths: deaths, State_Capital: state_capital, Country: country, Updated: updated} //save data into detail variable
+				res = append(res, details)                                                                                                                                   //append into result slice                                                                                                                  //appending it
 
 			}
 		} //states values
 	}
-	//fmt.Println(res)        //print result of structure details
+	fmt.Println(res) //print result of structure details
+
+	var countryNameWithHavingStates []string
+	for i := 1; i < len(res); i++ {
+		if res[i].Country != res[i-1].Country {
+			//fmt.Println(res[i].Country)
+			countryNameWithHavingStates = append(countryNameWithHavingStates, res[i].Country)
+
+		}
+	}
+	// var countryNameWithHavingStates []string
+	// for _, i := range res {
+	// 	if countryNameWithHavingStates == nil {
+	// 		countryNameWithHavingStates = append(countryNameWithHavingStates, i.Country)
+
+	// 	}
+	// 	fmt.Print(i.Country)
+	// 	for k, _ := range countryNameWithHavingStates {
+	// 		if countryNameWithHavingStates[k] != i.Country {
+	// 			countryNameWithHavingStates = append(countryNameWithHavingStates, i.Country)
+	// 		}
+
+	// 	}
+	//}
+	//fmt.Println(countryNameWithHavingStates)
+	//fmt.Println(len(countryNameWithHavingStates))
 	//create csv file
-	createCSVfile(res)
+	//createCSVfile(res)
 	webPage.Execute(w, res) //return  to  web page
 
 }
@@ -137,7 +170,7 @@ func createCSVfile(res []Details) {
 			RecoveredString,
 			DeathsString,
 			res[key].Country,
-			res[key].Capital_City,
+			//res[key].Capital_City,
 			res[key].Updated,
 		)
 
@@ -146,12 +179,17 @@ func createCSVfile(res []Details) {
 	}
 
 }
-func handlerMethod() {
-	log.Println("Server started on: http://localhost:8067")
-	http.HandleFunc("/", getWorldCovidDetails)
-	log.Fatal(http.ListenAndServe(":8067", nil))
-}
+
+// func handlerMethod() {
+// 	log.Println("Server started on: http://localhost:8067")
+// 	http.HandleFunc("/", getWorldCovidDetails)
+// 	log.Fatal(http.ListenAndServe(":8067", nil))
+// }
 
 func main() {
-	handlerMethod()
+	//handlerMethod()
+	getWorldCovidDetails()
 }
+
+//[Belgium Brazil Canada Chile China Colombia Denmark France Germany India Italy Japan Mexico Netherlands Pakistan Peru Russia
+//Spain Sweden Ukraine United Kingdom US]

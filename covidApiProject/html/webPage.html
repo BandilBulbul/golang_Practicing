@@ -4,9 +4,138 @@
     <meta charset="UTF-8">
     <title>World Covid Details</title>
     <style>
+
+* {  
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    }
+
+    header{
+    position:relative;
+   }
+body{
+    font-family:"Roboto";
+}
+.nav{
+    position:absolute;
+    width:1366px;
+    height:80px;
+    left:0px;
+    top:0px;
+    background: #c9c7c7;
+    
+}
+.logo{
+    position:absolute;
+    left:3.95%;
+    right:92.83%;
+    top:2.34%;
+    bottom:92.45%;
+}
+.covid{
+    position:absolute;
+    width:224px;
+    height:45px;
+    left:134px;
+    top:18px;
+
+    font-family:Poppins; 
+    font-style: normal;
+    font-weight: 500;
+    font-size:30px;
+    line-height:45px;
+
+    color:#000000;
+}
+.list{
+    list-style:none;
+}
+.home{
+    position:absolute;
+    width:66px;
+    height:33px;
+    left:616px;
+    top:21px;
+
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:500;
+    font-size:22px;
+    line-height:33px;
+
+    color:#000000;
+}
+.about{
+    position:absolute;
+    width:66px;
+    height:33px;
+    left:732px;
+    top:23px;
+
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:normal;
+    font-size:22px;
+    line-height:33px;
+
+    color:#000000;
+    opacity:0.5;   
+}
+.who{
+    position:absolute;
+    width:54px;
+    height:33px;
+    left:848px;
+    top:23px;
+
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:normal;
+    font-size:22px;
+    line-height:33px;
+
+    color:#000000;
+    opacity:0.5;
+
+}
+.worlds{
+    position:absolute;
+    width:54px;
+    height:33px;
+    left:948px;
+    top:23px;
+
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:normal;
+    font-size:22px;
+    line-height:33px;
+
+    color:#000000;
+    opacity:0.5;
+
+}
+.india{
+    position:absolute;
+    width:54px;
+    height:33px;
+    left:1080px;
+    top:23px;
+
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:normal;
+    font-size:22px;
+    line-height:33px;
+
+    color:#000000;
+    opacity:0.5;
+
+}
         .myDiv {
-            border: 5px outset red;
-            background-color: lightblue;
+            border: 5px outset rgb(252, 252, 252);
+            background-color: rgb(252, 252, 252);
             text-align: center;
         }
         table.center {
@@ -16,17 +145,79 @@
         #bold{
             font-weight: bold;
         }
+        nav{
+    background:#f3f0f0;
+    height: 10vh;
+    width:100%; 
+    display:flex;
+    align-items:center;
+    padding-right:60px;
+}
+
+.logo{
+    flex:1;
+    margin-left:40px;
+}
+
+.logo h1{
+    letter-spacing:2px;
+    font-size:30px;
+}
+.list-items{
+    flex:2;
+    display:flex;
+    justify-content:space-evenly;
+}
+.list{
+    list-style:none;
+}
+
+.link  {
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    transition:0.4s;
+}
     </style>
 </head>
 <body>
-
+    <header>
+        <nav>
+            <div class="nav">
+                <div class="logo">
+                    <h1>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9-PAxnAeB0xge1OlI-denzGD4Xr4h8I-xg&usqp=CAU" width="80" height="80"></img><h2 class="covid">Covid Updates</h2>
+                    </h1>
+                </div>
+                <div>
+                <ul>
+                    <li class="list">
+                        <a href="/" class="home">HOME</a>
+                    </li>
+                    <li class="list">
+                         <a href="https://www.covid19india.org/about" class="about">ABOUT</a>
+                    </li>
+                    <li class="list">
+                        <a href="https://www.who.int/india/emergencies/coronavirus-disease-(covid-19)" class="who">WHO</a>
+                    </li> 
+                    <li class="list">
+                        <a href="/world" class="worlds">WORLD</a>
+                    </li>   
+                    <li class="list">
+                        <a href="/indiaStates" class="india">INDIA</a>
+                    </li> 
+                </ul>
+                </div>
+            </div>
+            </nav>
 <div class="myDiv">
 <h2> World Covid Details </h2>
 <div align=right border="2">
-    <form method="POST" action="/get">
-        <input type="button" value="India's States" id="bold"/>
-    </form>
+    <a href="/" class="link">Home</a> <br/>
+    <a href="/vaccinated" class="link">World Vaccinated</a><br/>
+    <a href="/indiaStates" class="link">India's States</a><br/>
 </div>
+<form action="/save" method="POST">
 <table border="1"  class="center">
     <thead>
     <tr>
@@ -36,13 +227,12 @@
         <td><h2>Deaths</h2></td>
         <td><h2>Capital</h2></td>
         <td><h2>Updated Time</h2></td>
-
     </tr>
     </thead>
     <tbody>
     {{range. }}
     <tr>
-        <td>{{ .Country}} </td>
+        <td><a href="/states?country={{ .Country }}">{{  .Country}}</a></td>
         <td>{{ .Confirmed}}</td>
         <td>{{ .Recovered}} </td>
         <td>{{ .Deaths}} </td>
@@ -52,8 +242,9 @@
     {{ end }}
     </tbody>
 </table>
-
+</form>
 </div>
+</header>
 </body>
 </html>
 
