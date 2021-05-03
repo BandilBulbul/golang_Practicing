@@ -71,7 +71,7 @@ func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 		all := countryKeysValues[countryName].(map[string]interface{}) //create another one interface to map with inside valuea and keys
 
 		for country_key, country_value := range all {
-			if country_key == constant.ALLKey { // condition should be satisfied
+			if country_key == constant.ALLKey && countryName != constant.GlobalKey { // condition should be satisfied
 				all_countryValues := country_value.(map[string]interface{}) //create another one
 				var confirmed_id float64
 				var confirmed, recovered, deaths, country, capital_city, updated string

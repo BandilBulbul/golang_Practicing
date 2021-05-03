@@ -237,6 +237,11 @@
     width: 20;
     height: 20;
 }
+th {
+  background-color:grey;
+  color: white;
+}
+tr:hover {background-color:#f5f5f5;}
 
     </style>
 </head>
@@ -276,16 +281,16 @@
 					<table border="1"  class="center" >
     					<thead class="head">
     						<tr>
-        						<td><h2>People Vaccinated</h2></td>
-        						<td><h2>Country</h2></td>
-        						<td><h2>Population</h2></td>
+								<th><h2>Country</h2></th>
+        						<th><h2>People Vaccinated</h2></th>
+        						<th><h2>Population</h2></th>
     						</tr>
     					</thead>
     				<tbody>
     					{{range. }}
     						<tr>
+								<td> {{ .Country}} </td>
         						<td> {{ .People_Vaccinated}} </td>
-        						<td> {{ .Country}} </td>
         						<td> {{ .Population}} </td>
     						</tr>
     					{{ end }}

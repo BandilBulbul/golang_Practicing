@@ -12,6 +12,6 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	webPageHome.Execute(w, "Home")
+	webPageHome.Execute(w, "home")
 
 }

@@ -237,6 +237,26 @@
     width: 20;
     height: 20;
 }
+.btn{
+	background-color:white;
+	border:none;
+	color:white;
+	padding:15px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	margin:4px 2px;
+	border-radius:25px;
+
+}
+.link  {
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    transition:0.4s;
+	font-size:15px
+}
 
     </style>
 </head>
@@ -286,7 +306,7 @@
 						<tbody>
 							{{range. }}
 							<tr>
-								 <td><a href="/states?country={{ .Country }}">{{  .Country}}</a></td>
+								<td><button class="btn"><a href="/states?country={{ .Country }}" class="link">{{  .Country}}</a></button></td>
 								<td>{{ .Confirmed}}</td>
 								<td>{{ .Recovered}} </td>
 								<td>{{ .Deaths}} </td>

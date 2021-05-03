@@ -126,10 +126,15 @@ func getWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 				var updated string
 				country = i //pass the country name
 				for k1, v1 := range allV {
-					if k1 == "confirmed" && v1 != nil {
-						//confirmed = v1.(float64)
-						// s = strconv.FormatFloat(confirmed, 'f', 0, 64)
-						confirmed = strconv.FormatFloat(v1.(float64), 'f', 0, 64)
+
+					if k1 == "confirmed" {
+						if v1 != nil {
+							//confirmed = v1.(float64)
+							// s = strconv.FormatFloat(confirmed, 'f', 0, 64)
+							confirmed = strconv.FormatFloat(v1.(float64), 'f', 0, 64)
+						} else {
+							confirmed = " data not avaiable"
+						}
 
 					}
 					if k1 == "recovered" && v1 != nil {
@@ -151,6 +156,7 @@ func getWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 					if k1 == "updated" && v1 != nil {
 						updated = v1.(string)
 					}
+
 					if k1 == "confirmed" && v1 != nil {
 						confirmed_id = v1.(float64)
 						// s = strconv.FormatFloat(confirmed, 'f', 0, 64)
@@ -360,6 +366,7 @@ func getWorldVaccinationDetails(w http.ResponseWriter, r *http.Request) {
 				var population string
 				country = i //pass the country name
 				for k1, v1 := range allV {
+
 					// if k1 == "administered" && v1 != nil {
 					// 	administered = v1.(float64)
 					// }
@@ -374,9 +381,13 @@ func getWorldVaccinationDetails(w http.ResponseWriter, r *http.Request) {
 					if k1 == "country" && v1 != nil {
 						country = v1.(string)
 					}
-					if k1 == "population" && v1 != nil {
+					if k1 == "population" {
 						//population = v1.(float64)
-						population = strconv.FormatFloat(v1.(float64), 'f', 0, 64)
+						if v1 != nil {
+							population = strconv.FormatFloat(v1.(float64), 'f', 0, 64)
+						} else {
+							population = "not avilable"
+						}
 
 					}
 					//if k1 == "population" && v1 != nil {
@@ -529,14 +540,54 @@ func getWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 
 }
 
+type AllInfo struct {
+	All Data `json:"Assam"`
+}
+
+type Data struct {
+	//Confirmed  int    `json:"confirmed"`
+	//Recovered  int    `json:"recovered"`
+	//Deaths     int    `json:"deaths"`
+	//Country    string `json:"country"`
+	//Population int    `json:"population"`
+	Updated string `json:"updated"`
+}
+
 func home(w http.ResponseWriter, r *http.Request) {
+	resp, err := http.Get("https://covid-api.mmediagroup.fr/v1/cases?country=India")
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer resp.Body.Close()
+	bodyBytes, _ := ioutil.ReadAll(resp.Body)
+	//bodyString := string(bodyBytes)
+
+	//bodyString := string(bodyBytes)
+	//fmt.Println(bodyString)
+
+	var all AllInfo
+	json.Unmarshal(bodyBytes, &all)
+	//values := Data{Confirmed: all.All.Confirmed, Recovered: all.All.Recovered, Deaths: all.All.Deaths, Country: all.All.Country, Updated: all.All.Updated}
+	values := Data{Updated: all.All.Updated}
+
 	webPageHome, err := template.ParseFiles("C:\\Users\\SRS\\gitProject16april\\golang_Practicing\\covidApiProject\\html\\homenew.html")
 	if err != nil {
 		log.Fatal(err)
 	}
-	webPageHome.Execute(w, "Home")
-
+	fmt.Println(all.All.Updated)
+	fmt.Println(values)
+	values.Updated = values.Updated[0:16]
+	webPageHome.Execute(w, values)
 }
+
+// func home(w http.ResponseWriter, r *http.Request) {
+// 	webPageHome, err := template.ParseFiles("C:\\Users\\SRS\\gitProject16april\\golang_Practicing\\covidApiProject\\html\\homenew.html")
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+// 	webPageHome.Execute(w, "Home")
+
+// }
 func handlerMethod() {
 	log.Println("Server started on: http://localhost:8065")
 	http.HandleFunc("/indiaStates/", getIndiaStatesdCovidDetails)

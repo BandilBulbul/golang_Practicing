@@ -17,4 +17,11 @@ const (
 	PopulationKey        string = "population"
 	WorldKey             string = "World"
 	GlobalKey            string = "Global"
+	ContinentalNA        string = "North America"
+	ContinentalUS        string = "United States"
+	ContinentalE         string = "Europe"
+	ContinentalAS        string = "Asia"
+	ContinentalEU        string = "European Union"
+	ContinentalSA        string = "South America"
+	ContinentalAF        string = "Africa"
 )
