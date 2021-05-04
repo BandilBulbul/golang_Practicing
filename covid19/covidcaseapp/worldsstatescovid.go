@@ -1,4 +1,4 @@
-package worldstatescovid
+package covidcaseapp
 
 import (
 	"encoding/json"
@@ -76,7 +76,11 @@ func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 				var state_capital string
 				var updated string
 				country = countryName //pass the country name
-				state_capital = country_key
+				if country_key != constant.ALLKey {
+					state_capital = country_key
+				} else {
+					state_capital = countryName + " Country Cases"
+				}
 				for dataKey, dataValue := range allValues {
 					if dataKey == constant.ConfirmedKey && dataValue != nil {
 						confirmed = strconv.FormatFloat(dataValue.(float64), 'f', 0, 64)

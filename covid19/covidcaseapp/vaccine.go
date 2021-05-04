@@ -1,4 +1,4 @@
-package worldcovid
+package covidcaseapp
 
 import (
 	"covid19/constant"

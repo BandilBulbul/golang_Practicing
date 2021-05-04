@@ -1,7 +1,7 @@
 package main
 
-import "covid19/handler"
+import "covid19/route"
 
 func main() {
-	handler.HandlerMethod()
+	route.HandlerMethod()
 }

@@ -1,4 +1,4 @@
-package homepage
+package covidcaseapp
 
 import (
 	"covid19/constant"
@@ -12,6 +12,7 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	webPageHome.Execute(w, "home")
+
+	webPageHome.Execute(w, nil)
 
 }
