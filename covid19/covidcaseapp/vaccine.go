@@ -74,7 +74,6 @@ func GetWorldVaccinationDetails(w http.ResponseWriter, r *http.Request) {
 						country = datavalue.(string)
 					}
 					if datakey == constant.PopulationKey {
-						//population = strconv.FormatFloat(datavalue.(float64), 'f', 0, 64)
 						if datavalue != nil {
 							population = strconv.FormatFloat(datavalue.(float64), 'f', 0, 64)
 						} else {
@@ -87,7 +86,6 @@ func GetWorldVaccinationDetails(w http.ResponseWriter, r *http.Request) {
 				}
 				vaccinatationCountryDetails = VaccinatationCountryDetails{People_Vaccinated: peopleVaccinated, Country: country, Population: population, Population_Id: population_id} //save data into detail variable
 				vaccineDatails = append(vaccineDatails, vaccinatationCountryDetails)                                                                                                   //append into result slice                                                                                                                  //appending it
-
 			}
 		}
 	}

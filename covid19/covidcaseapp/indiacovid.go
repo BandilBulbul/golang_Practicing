@@ -15,13 +15,13 @@ import (
 )
 
 type StatesDetails struct {
-	Confirmed_Id float64 `json:"confirmed_id"`
-	Confirmed    string  `json:"confirmed"`
-	Recovered    string  `json:"recovered"`
-	Deaths       string  `json:"deaths"`
-	Country      string  `json:"country"`
-	Capital_City string  `json:"capital_city"`
-	Updated      string  `json:"updated"`
+	Confirmed_Id float64
+	Confirmed    string
+	Recovered    string
+	Deaths       string
+	Country      string
+	Capital_City string
+	Updated      string
 }
 
 //get india's states data
@@ -66,9 +66,8 @@ func GetIndiaStatesdCovidDetails(w http.ResponseWriter, r *http.Request) {
 		all := statesCovidDetails[country_Name].(map[string]interface{}) //create another one interface to map with inside valuea and keys
 		if country_Name != constant.ALLKey {                             // condition should be satisfied
 			for dataKey, dataValue := range all {
-
 				country = country_Name //pass the country name
-				//for k1, v1 := range allV {
+
 				if dataKey == constant.ConfirmedKey && dataValue != nil {
 					confirmed = strconv.FormatFloat(dataValue.(float64), 'f', 0, 64)
 				}
@@ -90,9 +89,6 @@ func GetIndiaStatesdCovidDetails(w http.ResponseWriter, r *http.Request) {
 				if dataKey == constant.ConfirmedKey && dataValue != nil {
 					confirmed_id = dataValue.(float64)
 				}
-				//}
-				//append into result slice                                                                                                                  //appending it
-
 			}
 			details = StatesDetails{Confirmed: confirmed, Recovered: recovered, Deaths: deaths, Capital_City: capital_city, Country: country, Updated: updated, Confirmed_Id: confirmed_id} //save data into detail variable
 			states = append(states, details)

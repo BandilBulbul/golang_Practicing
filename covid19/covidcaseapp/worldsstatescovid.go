@@ -18,13 +18,13 @@ import (
 )
 
 type CountryStatesDetails struct {
-	Confirmed_Id  float64 `json:"confirmed_id"`
-	Confirmed     string  `json:"confirmed"`
-	Recovered     string  `json:"recovered"`
-	Deaths        string  `json:"deaths"`
-	Country       string  `json:"country"`
-	State_Capital string  `json:"capital_city"`
-	Updated       string  `json:"updated"`
+	Confirmed_Id  float64
+	Confirmed     string
+	Recovered     string
+	Deaths        string
+	Country       string
+	State_Capital string
+	Updated       string
 }
 
 func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
@@ -104,7 +104,6 @@ func GetWorldStatesCovidDetails(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 	}
-
 	slice.Sort(statesDetails, func(i, j int) bool { //sort the slice
 		return statesDetails[i].Confirmed_Id > statesDetails[j].Confirmed_Id
 	})

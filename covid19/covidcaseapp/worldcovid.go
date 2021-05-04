@@ -17,13 +17,13 @@ import (
 )
 
 type WorldDetails struct {
-	Confirmed_Id float64 `json:"confirmed_id"`
-	Confirmed    string  `json:"confirmed"`
-	Recovered    string  `json:"recovered"`
-	Deaths       string  `json:"deaths"`
-	Country      string  `json:"country"`
-	Capital_City string  `json:"capital_city"`
-	Updated      string  `json:"updated"`
+	Confirmed_Id float64
+	Confirmed    string
+	Recovered    string
+	Deaths       string
+	Country      string
+	Capital_City string
+	Updated      string
 }
 
 //Getting World wide data with covid cases globally
@@ -94,7 +94,12 @@ func GetWorldCovidDetails(w http.ResponseWriter, r *http.Request) {
 					if dataKey == constant.CapitalCityKey && dataValue != nil {
 						capital_city = dataValue.(string)
 					}
-					if dataKey == constant.UpdatedKey && dataValue != nil {
+					if dataKey == constant.UpdatedKey {
+						if dataValue != nil {
+							updated = dataValue.(string)
+						} else {
+							updated = "Not Available"
+						}
 						updated = dataValue.(string)
 					}
 					if dataKey == constant.ConfirmedKey && dataValue != nil {

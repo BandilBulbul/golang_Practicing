@@ -1,11 +1,9 @@
 package util
 
 import (
-	"encoding/csv"
 	"encoding/json"
 	"io/ioutil"
 	"log"
-	"os"
 )
 
 type URLStruct struct {
@@ -13,14 +11,15 @@ type URLStruct struct {
 	UrlVaccine string
 	UrlIndia   string
 }
-type CSVFile struct {
-	Confirmed    string `json:"confirmed"`
-	Recovered    string `json:"recovered"`
-	Deaths       string `json:"deaths"`
-	Country      string `json:"country"`
-	Capital_City string `json:"capital_city"`
-	Updated      string `json:"updated"`
-}
+
+// type CSVFile struct {
+// 	Confirmed    string `json:"confirmed"`
+// 	Recovered    string `json:"recovered"`
+// 	Deaths       string `json:"deaths"`
+// 	Country      string `json:"country"`
+// 	Capital_City string `json:"capital_city"`
+// 	Updated      string `json:"updated"`
+// }
 
 func ReadUrl() URLStruct {
 	urlFile, err := ioutil.ReadFile("constant\\file.json")
@@ -37,25 +36,25 @@ func ReadUrl() URLStruct {
 
 }
 
-func CreateCSVfile(res []CSVFile) {
-	file, _ := os.Create("constant\\covidDetailsFile.csv")
-	defer file.Close()
-	writer := csv.NewWriter(file)
-	defer writer.Flush()
+// func CreateCSVfile(res []CSVFile) {
+// 	file, _ := os.Create("constant\\covidDetailsFile.csv")
+// 	defer file.Close()
+// 	writer := csv.NewWriter(file)
+// 	defer writer.Flush()
 
-	//define colum headers
-	headers := []string{"confirmed", "recovered", "deaths", "country", "capital_city", "updated"}
+// 	//define colum headers
+// 	headers := []string{"confirmed", "recovered", "deaths", "country", "capital_city", "updated"}
 
-	for key := range res {
-		r := make([]string, 0, 1+len(headers))
-		r = append(r,
-			res[key].Confirmed,
-			res[key].Recovered,
-			res[key].Deaths,
-			res[key].Country,
-			res[key].Capital_City,
-			res[key].Updated,
-		)
-		writer.Write(r)
-	}
-}
+// 	for key := range res {
+// 		r := make([]string, 0, 1+len(headers))
+// 		r = append(r,
+// 			res[key].Confirmed,
+// 			res[key].Recovered,
+// 			res[key].Deaths,
+// 			res[key].Country,
+// 			res[key].Capital_City,
+// 			res[key].Updated,
+// 		)
+// 		writer.Write(r)
+// 	}
+// }
