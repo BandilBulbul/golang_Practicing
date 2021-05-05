@@ -7,6 +7,6 @@ https://covid-api.mmediagroup.fr/v1/cases
 Project is based on Dynamic Webpage 
 Go language and html/CSS code is used to develop this project
 The data is scraped, filtered and collected to be displayed as required
-The Covid data is fetched from global server and being updated in real time
+The Covid data is fetched from global server and being updated in real time.
 
 
